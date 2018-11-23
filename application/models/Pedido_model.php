@@ -13,6 +13,8 @@ class Pedido_model extends CI_Model{
         $this->db->join('meioPag','meioPag.idmeiopag = pedido.idmeiopag');
         $this->db->join('cliente','cliente.idcliente = pedido.idcliente');
         $this->db->join('usuario','usuario.idusuario = pedido.idusuario');
+        $this->db->where('statusPed','andamento');
+        
         $query=$this->db->get();
     return $query->result();
     }
@@ -32,7 +34,7 @@ class Pedido_model extends CI_Model{
         return $this->db->insert('pedido',$id);
     }
     function deletar($id){
-        $this->db->where('pedido',$id);
+        $this->db->where('idpedido',$id);
         return $this->db->delete('pedido');
     }
     function editar($id){

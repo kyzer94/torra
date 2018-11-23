@@ -28,7 +28,7 @@
     <a class="btn btn-primary" href="<?php echo base_url() . 'meioPag'; ?>">Cadastro de meio de pagamento</a>
     <br>
     <br>
-    <a class="btn btn-primary" href="<?php echo base_url() . 'itensvenda'; ?>">Venda</a>
+    <a class="btn btn-primary" href="<?php echo base_url() . 'pedido'; ?>">Venda</a>
  
 
 </div>

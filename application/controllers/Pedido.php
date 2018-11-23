@@ -32,7 +32,8 @@ class Pedido extends CI_Controller {
         $dados['idcliente'] = $this->input->post('idcliente');
         $dados['idmeioPag'] = $this->input->post('idmeioPag');
         $dados['data'] = $this->input->post('data');
-        $dados['idusuario'] = 4; //pegar da seção
+        $dados['idusuario'] = $this->session->userdata('logado')->idusuario; //pegar da seção
+        $dados['statusPed'] ='andamento';
        
         
         $result = $this->pedido->inserir($dados);
